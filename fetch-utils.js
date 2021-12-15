@@ -8,7 +8,6 @@ export async function getCocktails() {
     const response = await client
         .from('Cocktails')
         .select();
-
     return response.data;
 }
 
@@ -17,12 +16,25 @@ export async function getSazSpecs() {
         .from('Sazerac')
         .select();
     return response.data;
-
 }
 
 export async function getWhiskeySourSpecs() {
     const response = await client
         .from('whiskey_sour')
+        .select();
+    return response.data;
+}
+
+export async function getGimletSpecs() {
+    const response = await client
+        .from('Gimlet')
+        .select();
+    return response.data;
+}
+
+export async function getAmericanoSpecs() {
+    const response = await client
+        .from('Americano')
         .select();
     return response.data;
 }
